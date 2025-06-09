@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEase - Home</title>
+    <link rel="stylesheet" href="style/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>ShopEase</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li>
+              <a href="cart.html">Cart <span id="cart-count-nav">0</span></a>
+            </li>
+            <li><a href="auth.html" id="auth-link">Login</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div class="container">
+        <h1>Welcome to ShopEase</h1>
+        <p>Your one-stop shop for all your needs</p>
+      </div>
+    </div>
+
+    <main class="container">
+      <div class="filters">
+        <div class="search-container">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search products..."
+          />
+          <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="category-filter">
+          <select id="category-select">
+            <option value="">All Categories</option>
+            <!-- Categories will be populated dynamically -->
+          </select>
+        </div>
+      </div>
+
+      <div class="loading-spinner" id="loading-spinner">
+        <div class="spinner"></div>
+        <p>Loading products...</p>
+      </div>
+
+      <div class="products-grid" id="products-container">
+        <!-- Products will be populated dynamically -->
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 ShopEase. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast">
+      <div class="toast-content">
+        <i class="fas fa-check-circle"></i>
+        <div class="message">
+          <span class="text text-1">Success</span>
+          <span class="text text-2" id="toast-message"></span>
+        </div>
+      </div>
+      <i class="fa-solid fa-xmark close"></i>
+      <div class="progress"></div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>
